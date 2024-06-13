@@ -1,6 +1,6 @@
 # Delta Lake with Docker-Compose
 
-This repository is a fork of [delta-docker]<https://github.com/delta-io/delta-docker>. I created this repository because I wanted to use docker-compose on Ubuntu(x86-64) and python3 for personal purposes.
+This repository is a fork of [delta-docker](<https://github.com/delta-io/delta-docker>). I created this repository because I wanted to use docker-compose on Ubuntu(x86-64) and python3 for personal purposes.
 
 ## Working with Docker
 
