@@ -1,0 +1,12 @@
+version: "3"
+services:
+    delta_quickstart:
+        volumes:
+            - ./src:/opt/spark/work-dir/src
+        user: 1000:1000
+        container_name: delta_quickstart
+        stdin_open: true
+        tty: true
+        entrypoint:
+            - bash
+        image: delta_quickstart
