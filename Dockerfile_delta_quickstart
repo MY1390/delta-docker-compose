@@ -58,7 +58,6 @@ RUN apt -qq -y install vim curl tree
 # Configure ownership
 COPY --chown=${NBuser} startup.sh "${WORKDIR}"
 COPY --chown=${NBuser} quickstart.ipynb "${WORKDIR}"
-COPY --chown=${NBuser} rs/ "${WORKDIR}/rs"
 COPY --chown=${NBuser} src/ "${WORKDIR}/src"
 RUN chown -R ${NBuser}:${GROUP} /home/${NBuser}/ \
 && chown -R ${NBuser}:${GROUP} ${WORKDIR}
