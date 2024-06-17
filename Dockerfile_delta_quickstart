@@ -64,7 +64,6 @@ RUN chown -R ${NBuser}:${GROUP} /home/${NBuser}/ \
 
 # Rust install
 USER ${NBuser}
-RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
 # moved the source command into the bash process in the entrypoint startup.sh
 #RUN source "$HOME/.cargo/env"
 
