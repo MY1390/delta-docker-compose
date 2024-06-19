@@ -5,7 +5,7 @@ from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv('.env_example'))
 
 def create_SparkSession() -> SparkSession:
-    path = os.getenv('WORK_DIR')
+    path = os.getenv('PYTHONPATH')
     DELTA_SPARK_VERSION = '3.1.0'
     DELTA_PACKAGE_VERSION = f'delta-spark_2.12:{DELTA_SPARK_VERSION}'
     Log_path = f"{path}/src/Log/spark-logs"
