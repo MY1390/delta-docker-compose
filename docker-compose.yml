@@ -1,8 +1,9 @@
 version: "3"
 services:
-    delta_quickstart:
+    delta_pyspark:
         volumes:
             - ./src:/opt/spark/work-dir/src
+            - ./.env_example:/opt/spark/work-dir/.env_example
         user: 1000:1000
         container_name: delta_pyspark
         stdin_open: true

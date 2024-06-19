@@ -13,7 +13,10 @@ Older versions of Docker can sometimes cause issues, so I recommend following th
 ### Build the Image and docker-compose
 
 ```bash
-docker build -t delta_pyspark_quickstart -f Dockerfile_delta_quickstart .
+# build
+sudo docker build -t delta_pyspark_quickstart -f Dockerfile_delta_quickstart .
+# compose
 sudo docker-compose up -d
+#login
 sudo docker exec -it delta_pyspark /bin/bash
 ```

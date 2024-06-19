@@ -42,6 +42,7 @@ ARG ROAPI_VERSION="0.11.1"
 RUN pip install --quiet --no-cache-dir delta-spark==${DELTA_SPARK_VERSION} \
 deltalake==${DELTALAKE_VERSION} jupyterlab==${JUPYTERLAB_VERSION} pandas==${PANDAS_VERSION} roapi==${ROAPI_VERSION}
 
+RUN pip install --quiet --no-cache-dir python-dotenv
 
 # Environment variables
 FROM delta as startup
@@ -58,6 +59,7 @@ RUN apt -qq -y install vim curl tree
 
 # Configure ownership
 COPY --chown=${NBuser} startup.sh "${WORKDIR}"
+COPY --chown=${NBuser} .env_example "${WORKDIR}"
 COPY --chown=${NBuser} src/ "${WORKDIR}/src"
 RUN chown -R ${NBuser}:${GROUP} /home/${NBuser}/ \
 && chown -R ${NBuser}:${GROUP} ${WORKDIR}
