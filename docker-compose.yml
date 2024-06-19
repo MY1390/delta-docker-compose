@@ -4,9 +4,9 @@ services:
         volumes:
             - ./src:/opt/spark/work-dir/src
         user: 1000:1000
-        container_name: delta_quickstart
+        container_name: delta_pyspark
         stdin_open: true
         tty: true
         entrypoint:
             - bash
-        image: delta_quickstart
+        image: delta_pyspark_quickstart

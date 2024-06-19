@@ -1,7 +1,7 @@
-from spark_session import create_spark_session
+from .spark_session import create_SparkSession
 
 def main():
-    spark = create_spark_session()
+    spark = create_SparkSession()
 
 if __name__ == '__main__':
     main()
