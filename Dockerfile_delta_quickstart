@@ -50,6 +50,7 @@ ARG NBuser=NBuser
 ARG GROUP=NBuser
 ARG WORKDIR=/opt/spark/work-dir
 ENV DELTA_PACKAGE_VERSION=delta-spark_2.12:${DELTA_SPARK_VERSION}
+ENV PYTHONPATH=/opt/spark/work-dir
 
 # OS Installations Configurations
 RUN groupadd -g 1000 -r ${GROUP} && useradd -r -m -g ${GROUP} ${NBuser}
